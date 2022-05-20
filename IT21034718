@@ -1,0 +1,132 @@
+/*Land*/
+class Land
+{
+private:
+int landID;
+char landLoctaion[50];
+double landPrice;
+int count = 0;
+Selling* sell[SIZE2];
+Seller* seller;
+Buyer* buyer;
+Staff* staff;
+public:
+Land();
+Land(int sell1, int sell2,Seller* 
+pseller, Buyer* pbuyer,Staff* pstaff);
+void landDetails(int lanID, const char lanLocation, 
+double lanPrice,  const
+char , Seller* pseller , Buyer* pbuyer , Staff* pstaff);
+void deleteLandDetails();
+void updateLandDetails();
+void calculateLandPrice();
+void displayLanDetails();
+~Land();
+};
+Land::Land()
+{
+}
+Land::Land(int sell1, int sell2, 
+Seller* pseller, Buyer* pbuyer, Staff* pstaff)
+{
+sell[0] = new Selling(sell1);
+sell[1] = new Selling(sell2);
+seller = pseller;
+buyer = pbuyer;
+staff = pstaff;
+}
+void Land::landDetails(int lanID, const char lanLocation, 
+double lanPrice,   const
+char , Seller* pseller, Buyer* pbuyer, Staff* pstaff)
+{
+}
+void Land::deleteLandDetails()
+{
+}
+void Land::updateLandDetails()
+{
+}
+
+void Land::calculateLandPrice()
+{
+}
+void Land::displaylanDetails()
+{
+}
+void Land::checkAvailability()
+{
+}
+Land::~Land()
+}
+//----Destructor---- 
+}
+#include <iostream>
+using namespace std;
+int main()
+{
+  Land* lan = new Land();
+  lan->updateLanDetails();
+ lan->checkAvailability();
+  delete lan;
+  return 0;
+}
+
+/*staff*/
+
+class Staff
+{
+private:
+int staffID;
+char staffName[20];
+char staffEmail[20];
+char staffNumber[10];
+char staffUsername[20];
+char staffPassword[20];
+Land* lan[SIZE];
+public:
+Staff();
+Staff(int pstaffID, const char pstaffName[], const char
+pstaffEmail[], const char pstaffNumber[], const char
+pstaffUsername[], const char pstaffPassword[]);
+void login(const char stfUsername, const char stfPsword );
+void manage( Lan* plan);
+~Staff();
+};
+Staff::Staff()
+{
+staffID = 0;
+strcpy(staffName, "");
+strcpy(staffEmail, "");
+strcpy(staffNumber, "0000000000");
+strcpy(staffUsername, "");
+strcpy(staffPassword, "");
+}
+Staff::Staff(int pstaffID, const char pstaffName[], const char
+pstaffEmail[], const char pstaffNumber[], const char
+pstaffUsername[], const char pstaffPassword[])
+{
+staffID = pstaffID;
+strcpy(staffName, pstaffName);
+strcpy(staffEmail, pstaffEmail);
+strcpy(staffNumber, pstaffNumber);
+strcpy(staffUsername, pstaffUsername);
+strcpy(staffPassword, pstaffPassword);
+}
+void Staff::login(const char stfUsername, const char stfPsword)
+{
+}
+void Staff::manage(Lan* plan)
+{
+}
+Staff::~Staff()
+{
+//----Destructor---- 
+}
+#include <iostream>
+using namespace std;
+int main()
+{
+  Staff* staff = new Staff();
+  
+  return 0;
+}
